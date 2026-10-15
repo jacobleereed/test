@@ -1,0 +1,205 @@
+/* Base Reset & Typography */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+}
+
+body {
+    max-width: 650px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 40px 20px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center; /* This centers the balls in a row */
+}
+
+h2 {
+    color: #1e3c72;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+/* Hide number/powerball labels visually to keep the row clean */
+label[for^="number"], label[for="powerball"] {
+    display: none; 
+}
+
+/* Lottery Ball Inputs - Now sitting in a row */
+input[type="number"] {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #cbd5e1;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin: 5px;
+    color: #334155;
+    background-color: #f8fafc;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+    transition: all 0.2s ease;
+    display: inline-block; /* Forces them to sit side-by-side */
+    vertical-align: middle;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: #3b82f6;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* Remove up/down arrows from number inputs */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+input[type=number] {
+    appearance: textfield;
+}
+
+/* Special Styling for the Red Powerball */
+#powerball {
+    border-color: #ef4444;
+    background-color: #fef2f2;
+    color: #dc2626;
+    margin-left: 20px; /* Adds a visual gap before the powerball */
+}
+
+#powerball:focus {
+    border-color: #dc2626;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+}
+
+/* PowerPlay Checkbox Area */
+label[for="powerplay"] {
+    display: inline-block;
+    margin-top: 30px;
+    font-weight: 600;
+    color: #475569;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+#powerplay {
+    margin-top: 30px;
+    margin-left: 8px;
+    transform: scale(1.3);
+    accent-color: #1e3c72;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+/* Submit Button */
+#submit-btn {
+    display: block;
+    margin: 30px auto 0 auto;
+    padding: 14px 40px;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+    transition: transform 0.1s, box-shadow 0.2s;
+    width: 100%;
+    max-width: 300px;
+}
+
+#submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(16, 185, 129, 0.4);
+}
+
+#submit-btn:active {
+    transform: translateY(1px);
+}
+
+/* Results Section */
+#results {
+    margin-top: 40px;
+    width: 100%;
+}
+
+#numbers-display {
+    font-size: 1.2rem;
+    color: #475569;
+    margin-bottom: 10px;
+}
+
+#main-result {
+    color: #047857;
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+    line-height: 1.4;
+}
+
+/* Table Styling */
+#table {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+thead {
+    background-color: #1e3c72;
+    color: white;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+}
+
+th {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+tbody tr {
+    border-bottom: 1px solid #e2e8f0;
+    transition: background-color 0.2s;
+}
+
+tbody tr:last-child {
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background-color: #f1f5f9;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 500px) {
+    input[type="number"] {
+        width: 45px;
+        height: 45px;
+        font-size: 16px;
+        margin: 3px;
+    }
+    #powerball {
+        margin-left: 10px;
+    }
+}
