@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href=".\homestyles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <title>Powerball Winner</title>
+    </head>
+
+    <body>
+    
+        <h2>When would you have won the Powerball?</h2>
+
+        <label for="number1">Number 1:</label>
+        <input type="number" name="number1" id="number1" min="1" max="69" value="1"/>
+
+        <label for="number2">Number 2:</label>
+        <input type="number" name="number2" id="number2" min="1" max="69" value="1"/>
+
+        <label for="number3">Number 3:</label>
+        <input type="number" name="number3" id="number3" min="1" max="69" value="1"/>
+
+        <label for="number4">Number 4:</label>
+        <input type="number" name="number4" id="number4" min="1" max="69" value="1"/>
+
+        <label for="number5">Number 5:</label>
+        <input type="number" name="number5" id="number5" min="1" max="69" value="1"/>
+
+        <label for="powerball">Powerball:</label>
+        <input type="number" name="powerball" id="powerball" min="1" max="26" value="1"/>
+
+        <label for="powerball">PowerPlay:</label>
+        <input type="checkbox" id="powerplay" name="powerplay">
+
+        <button id="submit-btn">Submit</button>
+
+        <div id="results">
+            <h3 id="numbers-display"></h3>
+            <h3 id="main-result"></h3>
+            <div id="table"></div>
+        </div>
+        
+    <script src=".\powerballParse.js"></script>
+    </body>
+</html>
